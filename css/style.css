@@ -146,7 +146,7 @@ i:hover {
     background-color: var(--format-bg);
     background: var(--format-gradient);
     border-radius: 0.3rem;
-    padding: 0.5rem;
+    padding: 0.4rem;
     font-size: 0.7rem;
     font-weight: lighter;
     box-shadow: 3px 4px 9px rgba(0, 0, 0, 0.3);
