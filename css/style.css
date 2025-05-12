@@ -2,13 +2,13 @@
 
 /* BASE STYLES */
 :root {
-    --font-color: #ddd; /*#ddd;*/
-    --link-color: #dbdbdb;
-    --link-hover: #eee;
+    --font-color: #dedede; /*#ddd;*/
+    --link-color: #ccc;
+    --link-hover: #fff;
     --link-glow: #e9d3ef;
     --bg-color: #555;
     --bg-gradient: linear-gradient(-50deg, #555 0%, #ccc 100%);
-    --desc-bg: #888;
+    --desc-bg: rgba(136, 136, 136, 0.2);
     --format-bg: #5c5c5c;
     --format-gradient: linear-gradient(90deg, #5c5c5c 0%, #7d7d7d 70%);
 }
@@ -106,7 +106,7 @@ a:focus {
 
 i {
     font-size: 1.1rem;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
     padding: 0.3rem;
     border: 2px solid var(--link-color);
     border-radius: 50%;
@@ -169,6 +169,19 @@ a.page-nav:hover,
     text-fill-color: transparent;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(2px 2px var(--link-glow));
+}
+
+/* SETTINGS */
+footer {
+    display: flex;
+    width: 100%;
+}
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border: solid 2px #fff;
+    border-radius: 50%;
+    position: absolute;
 }
 
 @media (min-width: 380px) {
