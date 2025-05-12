@@ -2,7 +2,7 @@
 
 /* BASE STYLES */
 :root {
-    --font-color: #ddd;
+    --font-color: #ddd; /*#ddd;*/
     --link-color: #dbdbdb;
     --link-hover: #eee;
     --link-glow: #e9d3ef;
