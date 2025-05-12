@@ -5,12 +5,18 @@
     --primary-color: steelblue;
     --secondary-color: #1b206e;
     --backing-color: #f9f9f9;
+    --bg-color: linear-gradient(-50deg, #555 0%, #ccc 100%);
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    background-color: #444;
+    background: var(--bg-color) no-repeat;
 }
 
 html,
@@ -24,17 +30,24 @@ body {
     align-items: center;
     padding: 1rem;
     min-height: 100%;
-    background-color: #444;
     color: #ddd;
 }
 
-/* SPACING + POSITION */
+body {
+    max-width: 550px;
+}
+
 header,
 main {
     max-width: 100%;
 }
 
+.content {
+    margin: 0.4rem 0;
+}
+
 /* FONTS */
+
 h1,
 h2 {
     font-size: 3rem;
@@ -52,16 +65,23 @@ p {
 
 p.desc {
     font-style: italic;
+    margin: 1rem 0;
 }
 
+/* LINKS */
 ul li {
     list-style: none;
-    margin: 0.2rem;
 }
 
 a {
     color: inherit;
-    text-decoration: underline double;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.page-nav,
+.links a {
+    border-bottom: 2px solid;
 }
 
 a:active,
@@ -86,15 +106,58 @@ i {
 .cover {
     max-width: 100%;
     border-radius: 1rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.content-right {
+    max-width: 250px;
+    margin: auto;
 }
 
 /* COMIC INFO */
-.reading,
-.links,
-.format {
+.format,
+.links {
     text-align: left;
+    max-width: 300px;
 }
 
 .format {
     background-color: #777;
+    background: linear-gradient(90deg, #5c5c5c 0%, #7d7d7d 70%);
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    box-shadow: 3px 4px 9px rgba(0, 0, 0, 0.3);
+    opacity: 0.8;
+}
+
+.links {
+    margin: 0.8rem;
+}
+
+@media (min-width: 380px) {
+    .links-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+    }
+
+    .row-1 {
+        grid-row-start: 1;
+    }
+}
+
+@media (min-width: 460px) {
+    .content {
+        display: grid;
+        grid-template-columns: 4fr 3fr;
+        gap: 0.4rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .links-container {
+        grid-column: 1 / 3;
+    }
 }
